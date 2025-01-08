@@ -1,5 +1,11 @@
 # The project tree {#sec-chapter-5}
 
+::: {.callout-note appearance="simple" collapse="true"}
+## Key points
+* In the project tree, focus on key descriptive child elements (project title, abstract, and key personnel), and funding information.
+* Describe project funding using the **award** element.
+:::
+
 Use the &lt;**project**> tree to describe the project under which the dataset was created. This element is an EML ResearchProjectType (see [Appendix B](appendix-b-xml-schemas-and-eml.qmd)) and it is therefore possible to include a large range of structured child elements within a **&lt;project>** tree. We recommend focusing on a few key descriptive child elements (project title, abstract, and key personnel), and funding information, which are described below. There are optional child elements for describing the study area and project design (&lt;**studyAreaDescription**> and &lt;**designDescription**>), but if those descriptions are important and can be kept brief, we recommend putting them in the project abstract instead (**/eml:eml/dataset/project/abstract**).
 
 The &lt;**title**> and &lt;**personnel**> elements are required for any project tree. The &lt;**title**> element should distinctly identify the project. If the project is supported by a grant from a funding agency (NSF, for example) the project may already have a title that can be used for this element. If not, choose something concise and meaningful to a dataset user. Personnel associated with the project, such as principal investigators, should be included in one or more &lt;**personnel**> elements, which are **ResponsibleParty** XML types (described in [Appendix B](appendix-b-xml-schemas-and-eml.qmd)). A &lt;**personnel**> element must contain a child &lt;**role**> element, so include project personnel roles (principal investigator, co-PI, etc.) here. The project &lt;**abstract**> element is a brief, clearly-written overview of the project. It may contain information about the project objectives, study design, location, and other relevant details. The project &lt;**title**> and &lt;**abstract**> elements are essentially the same as elements presented in Chapter 3, while the &lt;**personnel**> element is similar to &lt;**associatedParty**> in Chapter 4. Guidelines presented in those sections also apply here.

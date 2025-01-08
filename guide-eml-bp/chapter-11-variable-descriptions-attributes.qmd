@@ -1,5 +1,11 @@
 # Variable descriptions (Attributes) {#sec-chapter-11}
 
+::: {.callout-note appearance="simple" collapse="true"}
+## Key points
+* Attribute metadata in EML should provide the name and definition of each attribute, its measurement domain, a description of coded values, definitions of missing values, and other pertinent information.
+* Use of the optional **storageType**, **missingValueCode** and **annotation** elements are recommended.
+:::
+
 The data entities described by an EML document are typically files containing some kind of research or monitoring data. As such, these data entities hold one or more variables, which are the amounts, characteristics, or other values being measured or controlled during data collection. In EML, a data entity’s variables are referred to as “attributes,” and the *eml-attribute* module provides EML structures to describe all attributes (variables) within a data entity. Attribute metadata in EML should provide the name and definition of each attribute, its measurement domain, a description of coded values, definitions of missing values, and other pertinent information. All &lt;**dataTable**> entities are required to contain an &lt;**attributeList**> element with this information, as are other, less-commonly used entity types.
 
 
@@ -10,7 +16,7 @@ The &lt;**attributeList**> tree is required for all data types except for &lt;**
 
 ### Attribute names (required) 
 
-The &lt;**attributeName**> element contains the identifier or name of an attribute (variable) in a data table, such as the header name for a column in a CSV file. Values in &lt;**attributeName**> must precisely match the name or identifier of an attribute in the data entity object to which they refer, and must be composed of alphanumeric characters, typically in the Unicode set. Attribute names are usually a short name or abbreviation for the full attribute name or description. When preparing a tabular data file for use or publication, we recommend making attribute names (e.g. column headers) clear, concise, and easy to type. They should also give some indication of the meaning or content of the data field. We recommend NOT 1) starting the attribute name with a number, 2) using special characters and spaces and 3) incorporating units into the attribute name (because metadata elements should be used for this). Following these recommendations makes the data file easier to reuse, and easier to describe with metadata in EML using the &lt;**attributeName**> element. 
+The &lt;**attributeName**> element contains the identifier or name of an attribute (variable) in a data table, such as the header name for a column in a CSV file. Values in &lt;**attributeName**> must precisely match the name or identifier of an attribute in the data entity object to which they refer, and must be composed of alphanumeric characters, typically in the Unicode set. Attribute names are usually a short name or abbreviation for the full attribute name or description. When preparing a tabular data file for use or publication, we recommend making attribute names (e.g. column headers) clear, concise, and easy to type. They should also give some indication of the meaning or content of the data field. We recommend NOT 1) starting the attribute name with a number, 2) using special characters and spaces and 3) incorporating units into the attribute name (because other metadata elements, e.g. <**unit**>, should be used for this). Following these recommendations makes the data file easier to describe and reuse. 
 
 ::: {.callout-tip}
 ## EDI context note
@@ -234,8 +240,8 @@ An attribute definition: **/eml:eml/dataset/dataTable/attributeList/attribute/at
 
 Nominal attribute: **/eml:eml/dataset/dataTable/attributeList/attribute/nominal**
 
-Standard numeric unit: **/eml:eml/dataset/dataTable/attributeList/attribute/ratio/standardUnit**
+Standard numeric unit: **/eml:eml/dataset/dataTable/attributeList/attribute/ratio/unit/standardUnit**
 
-Custom numeric unit: **/eml:eml/dataset/dataTable/attributeList/attribute/ratio/customUnit**
+Custom numeric unit: **/eml:eml/dataset/dataTable/attributeList/attribute/ratio/unit/customUnit**
 
 Missing value code: **/eml:eml/dataset/dataTable/attributeList/attribute/missingValueCode**

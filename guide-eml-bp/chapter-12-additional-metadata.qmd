@@ -1,5 +1,11 @@
 # Additional metadata {#sec-chapter-12}
 
+::: {.callout-note appearance="simple" collapse="true"}
+## Key points
+* The **additionalMetadata** element can contain **customUnit** specifications, annotations, and EML workflow indicators.
+* The **additionalMetadata** element has no schema defined other than to contain well-formed XML, so EML creators have developed a range of applications for this element.
+:::
+
 The **&lt;additionalMetadata>** element is a flexible field for including any other relevant metadata that pertains to the resource being described with EML. It may be used for extending EML to include metadata that is not already available in another part of the EML specification, or to include site- or system-specific extensions that are needed beyond the core metadata. There may be any number of &lt;**additionalMetadata**> elements included as children of the root of an EML document (**/eml:eml/additionalMetadata**) and each must contain valid XML within two available child elements. The &lt;**describes**> element is optional, and, if used, should contain a string identical to the \@**id** attribute of an EML element elsewhere in the document. The &lt;**metadata**> child element is required and is a generic container for any valid (or “Well-formed”) XML metadata to be included in the document. When both of these child elements are present, the content of a &lt;**metadata**> element therefore describes the EML element referenced in the &lt;**describes**> element preceding it. If the &lt;**describes**> element is omitted, it is assumed that the &lt;**additionalMetadata**> content applies to the entire EML document.
 
 Though there is significant flexibility in how to create and use **&lt;additionalMetadata>** elements, there are also some common use cases that require particular child elements. These use cases, and other considerations for using the &lt;**additionalMetadata**> element are below.

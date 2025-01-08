@@ -1,5 +1,11 @@
 # General dataset information {#sec-chapter-3}
 
+::: {.callout-note appearance="simple" collapse="true"}
+## Key points
+* Titles should be meaningful in a global context.
+* Dataset abstracts should focus on the data, not research results.
+:::
+
 The elements below are required or recommended to provide general information about the dataset and the resources it contains. All of these will be most useful when placed as direct child elements of &lt;**dataset**>.
 
 

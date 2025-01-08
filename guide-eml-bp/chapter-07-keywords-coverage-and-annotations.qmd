@@ -1,5 +1,15 @@
 # Keywords, coverage, and annotations {#sec-chapter-7}
 
+::: {.callout-note appearance="simple" collapse="true"}
+## Key points
+* Whenever possible use keyword terms drawn from established vocabularies.
+* **keywordSet** can be used to group terms drawn from a similar **keywordThesaurus**.
+* \@**keywordType** can be used to identify the purpose of a keyword (e.g., identifying themes or places).
+* **geographicCoverage** elements are designed to facilitate data discovery, but not to fully describe spatial datasets.
+* **endDate** tags should be used to identify the end date of data already in the dataset, even if future data collection is planned.
+* When taxa are numerous, **taxonomicCoverage** elements with fully-populated taxonomic trees may become extremely large. If so include only the species-level names, along with a **taxonId** element.
+* Annotations can provide a valuable supplement to standard EML elements, but look for advice and feedback on using semantic annotation in your research and data management communities before implementing them in EML.
+:::
 
 ## Keywords (&lt;keywordSet>, &lt;keyword>)
 

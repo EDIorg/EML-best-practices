@@ -1,5 +1,12 @@
 # People and organizations (ResponsibleParty) {#sec-chapter-4}
 
+::: {.callout-note appearance="simple" collapse="true"}
+## Key points
+* **userId** elements can reduce the need to duplicate detailed contact information within each **ResponsibleParty** element.
+* Position-centric email addresses, rather than individual addresses, are recommended for **ResponsibleParty** elements where the individual filling a role may change over time, such as a data manager.
+* Use of individual (ORCID) and organizational (ROR) registries is strongly encouraged.
+:::
+
 The EML schema provides several elements to describe the parties responsible for a dataset. Responsible party elements may refer to either individual people, organizations, or positions within an organization, and all are derived from the **ResponsibleParty** EML type (see [Appendix B](appendix-b-xml-schemas-and-eml.qmd)). Examples include &lt;**creator**>, &lt;**contact**>, &lt;**associatedParty**>, &lt;**metadataProvider**> and &lt;**publisher**>. Responsible party elements are typically used multiple times, and often in multiple places, in an EML document. Note that in this chapter we focus on &lt;**dataset**> level responsible parties, but also see the &lt;**project**> tree for similar recommendations there (Chapter 5). Any **ResponsibleParty** element must be further described using one or more of the &lt;**individualName**>, &lt;**positionName**>, or &lt;**organizationName**> elements, and may include &lt;**userId**>, &lt;**address**>, &lt;**electronicMailAddress**>, and &lt;**phone**> child elements. Recommendations for populating these child elements are described first since they apply generally to any of the specific **ResponsibleParty** elements that follow.
 
 

@@ -1,5 +1,12 @@
 # Data access and usage rights {#sec-chapter-6}
 
+::: {.callout-note appearance="simple" collapse="true"}
+## Key points
+* Online distribution is recommended.
+* Open licenses with minimal restrictions on data use are recommended for most datasets.
+* CC0 and CC-BY are frequently used licenses.
+:::
+
 The primary purpose of using EML to describe a dataset is to make the data reusable. While the majority of an EML is devoted to describing the data and their origin, there are also several EML elements used to determine whether, how, and by whom the data should be used. 
 
 

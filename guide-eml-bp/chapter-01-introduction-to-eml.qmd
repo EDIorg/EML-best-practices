@@ -1,5 +1,11 @@
 # Introducing the Ecological Metadata Language {#sec-chapter-1}
 
+::: {.callout-note appearance="simple" collapse="true"}
+## Key points
+* EML provides a framework for metadata, but still leaves many choices up to the creator.
+* This guide helps dataset creators make those choices based on community-level experience with EML metadata.
+:::
+
 The Ecological Metadata Language (EML) is a standard for exchanging structured metadata that describes environmental or ecological research and data products. The research products, or data, being described may be tabular data files, such as a table of numerical values, spatial data files, prose documents, images, computer code, or any number of other digital outputs from scientific research or data collection activities. The purpose of EML is to contain the metadata, defined as “data that provides information about other data,” necessary to understand and reuse data that is shared, published, or otherwise distributed. Metadata are most useful when they are detailed and can be easily understood by data users, and with appropriate preparation, EML metadata can easily meet this expectation.
 
 The EML standard is a dialect of the eXtensible Markup Language (XML, see [Appendix B](appendix-b-xml-schemas-and-eml.qmd)) and, as such, is a very flexible, modular, and extendable container for standardized information. All XML documents, including EML, are designed to be both human and machine readable. Metadata documents written in EML can therefore describe many types of research data, with as much detail as necessary or desired, while remaining accessible to data users. This makes EML highly effective in a wide range of applications for publishing, discovering, accessing, and reusing research data. 

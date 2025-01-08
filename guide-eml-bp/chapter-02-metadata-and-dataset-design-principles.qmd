@@ -1,5 +1,10 @@
 # Metadata and dataset design principles {#sec-chapter-2}
 
+::: {.callout-note appearance="simple" collapse="true"}
+## Key points
+* There are some high-priority metadata elements that should be included in EML metadata, including titles, keywords, abstracts, coverages, methods and attributes. 
+* Repeatable elements can be placed at many levels in an EML document, but the recommendation is to place them at the highest level whenever possible (often **dataset**). 
+:::
 
 ## Definition and Structure of a Dataset
 

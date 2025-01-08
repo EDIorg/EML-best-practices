@@ -1,5 +1,12 @@
 # Citations and references {#sec-chapter-8}
 
+::: {.callout-note appearance="simple" collapse="true"}
+## Key points
+* In practice, “cited by” information is most often identified after-the-fact and tracked by non-EML systems at repositories or other services.
+* Include only one reference within each **bibtex** element, and enclose each **bibtex** element within a **citation** element.
+* Use **literatureCited** and other **CitationType** elements as direct children of dataset rather than in lower-level elements (e.g., **methodStep**). 
+:::
+
 Scholarly research norms call for the attribution of sources in all research works. More recently established open science principles place high value on the reproducibility of research, with the expectation that citation-based links between published research products, such as between journal articles and datasets, will facilitate this. Citation metrics have also become increasingly important for gauging the re-use and impact of any research product, including datasets. The EML standard therefore supports extensive use-cases for citations and referencing in datasets, and we provide details on usage and examples below. These include several new elements that were introduced in EML version 2.2, as described in the [EML schema documents](https://eml.ecoinformatics.org/whats-new-in-eml-2-2-0.html). 
 
 

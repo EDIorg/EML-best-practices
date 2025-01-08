@@ -1,5 +1,13 @@
 # Data entities {#sec-chapter-10}
 
+::: {.callout-note appearance="simple" collapse="true"}
+## Key points
+* Publish tabular data as plain delimited text files when possible, instead of proprietary or binary file formats.
+* For non-tabular data in  **otherEntity** elements,  use open, non-proprietary file formats to the extent possible.
+* Place standardized descriptive text in the **entityType** child element that complements the standardized file format information included in **physical/dataFormat/externallyDefinedFormat/formatName**.
+* For **externallyDefinedFormat** we recommend using media type values (formerly known as MIME types).
+:::
+
 An EML document is a container for metadata that describe the digital products of research or data collection activities, which can include a wide range of file types and other data objects. Data entities are a class of EML elements that directly describe these digital objects, and altogether, six data entity types have been defined for this purpose. This chapter provides thorough guidance on using &lt;**dataTable**> and &lt;**otherEntity**> data entity elements because they are very commonly used in EML documents and are capable of describing a wide range of data objects or files. The &lt;**spatialRaster**> and &lt;**spatialVector**> entity types are occasionally used for geospatial data objects and are addressed in depth in the [spatial data](https://ediorg.github.io/data-package-best-practices/spatial-data.html) chapter of the “Data Package Design for Special Cases” companion document. The &lt;**view**> and &lt;**storedProcedure**> entity types are only briefly described in [Appendix A](appendix-a-specialized-elements.qmd) because they refer to specific data products derived from relational databases that are rarely used. To assist with selection of an EML entity type, table A.1 in [Appendix A](appendix-a-specialized-elements.qmd) describes the purpose, example data objects, and metadata features of all six available types.
 
 Every EML data entity has a set of potential child elements in common, called the **EntityGroup**, for storing general information about the data resource. Some of these are required and some are recommended. In addition, each data entity type has a set of child elements specific to the type with, again, some required and some recommended. Table 10.1 summarizes typical use cases for &lt;**dataEntity**> and &lt;**otherEntity**>, and their required and recommended child elements. More details about child elements come later in the chapter.
