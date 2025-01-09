@@ -42,7 +42,7 @@ Annotation elements (\<**annotation**>) may be included within \<**additionalMet
 
 ## EML workflow indicators
 
-Some EML creation tools or workflows insert XML metadata into <additionalMetadata> to indicate the origin and build status of the EML document. For example, the ezEML metadata editor application inserts the application version and any EML templates used to create the EML document, as shown in Example 12.2.
+Some EML creation tools or workflows insert XML metadata into \<additionalMetadata> to indicate the origin and build status of the EML document. For example, the ezEML metadata editor application inserts the application version and any EML templates used to create the EML document, as shown in Example 12.2.
 
 Example 12.2: \<**additionalMetadata**> elements added to an EML document by the ezEML metadata editor.
 

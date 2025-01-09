@@ -117,10 +117,10 @@ At each monitoring site, between 10 and 21 pitfall traps were installed in rando
 
 ### Citations
 
-Any \<**methodStep**> element may contain an indeterminate number of \<**citation**> child elements for documenting references to external sources. The \<**citation**> element is a CitationType designed for bibliographic information, which can be useful when referencing, for example, a methods paper or published protocol used to collect the data. With the introduction of new citation and referencing features in EML 2.2, **it is no longer recommended to place <citation> elements within a <methodStep>** - use the \<**literatureCited**> element instead, preferably at the \<**dataset**> level. See Chapter 8 and [Appendix B](appendix-b-xml-schemas-and-eml.qmd) for more information.
+Any \<**methodStep**> element may contain an indeterminate number of \<**citation**> child elements for documenting references to external sources. The \<**citation**> element is a CitationType designed for bibliographic information, which can be useful when referencing, for example, a methods paper or published protocol used to collect the data. With the introduction of new citation and referencing features in EML 2.2, **it is no longer recommended to place \<citation> elements within a \<methodStep>** - use the \<**literatureCited**> element instead, preferably at the \<**dataset**> level. See Chapter 8 and [Appendix B](appendix-b-xml-schemas-and-eml.qmd) for more information.
 
 
-## Optional <methods> child elements
+## Optional \<methods> child elements
 
 There are two other optional children of the \<**methods**> element: \<**sampling**> and \<**qualityControl**>. These elements are designed to contain very specific information about sampling procedures and post-collection data handling. In most cases this information is easy to include in one or more \<**methodsStep**> elements as described above, but if more detailed and structured descriptions of sampling and QA/QC procedures are needed these elements may be used. See [Appendix A](appendix-a-specialized-elements.qmd) for further information.
 

@@ -163,7 +163,7 @@ The \<**otherEntity**> element commonly describes non-tabular data objects that 
 
 Table 10.2. Recommended entity types and format names for some files that can be included in an \<**otherEntity**>.
 
-| Common Name<br> | <entityType> value<br>(from DataOne or similar) | <formatName> value<br>(IANA if possible, or DataOne) |
+| Common Name<br> | \<entityType> value<br>(from DataOne or similar) | \<formatName> value<br>(IANA if possible, or DataOne) |
 |----|-------|--------|
 | R script | R programming language script | text/x-rsrc |
 | R markdown file | R Markdown file | text/markdown |
