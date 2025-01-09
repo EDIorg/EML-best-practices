@@ -1,0 +1,10 @@
+
+# Test rendering a pdf
+#project:
+#  render:
+#    - book.qmd
+#    - preface.qmd
+#    - introduction.qmd
+#    - content-recommendations.qmd
+format: 
+  pdf: default

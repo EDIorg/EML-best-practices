@@ -18,7 +18,7 @@ Table 10.1. Required and recommended child elements for \<**dataTable**> and \<*
 | Entity Type | Typical Uses | Required and recommended elements |
 |---|------|--------|
 | \<**dataTable**> | Tabular data objects with a fixed structure (delimited text files, simple spreadsheet, etc.) | **EntityGroup**<br>\ \ \ \ \<**entityName**> (required)<br>\ \ \ \ \<**entityDescription**><br>\ \ \ \ \<**physical**><br>\<**attributeList**> (required)<br>\<**numberOfRecords**> |
-| \<**otherEntity**> | Data objects not described by other standard entity types (images, non-tabular data, binary files, etc.) | **EntityGroup**<br>\ \ \ \ \<**entityName**> (required)<br>\ \ \ \ \<**entityDescription**><br>\ \ \ \ \<**physical**><<br>\<**entityType**> (required)<br>\<**attributeList**> (for tabular data) |
+| \<**otherEntity**> | Data objects not described by other standard entity types (images, non-tabular data, binary files, etc.) | **EntityGroup**<br>\ \ \ \ \<**entityName**> (required)<br>\ \ \ \ \<**entityDescription**><br>\ \ \ \ \<**physical**><br>\<**entityType**> (required)<br>\<**attributeList**> (for tabular data) |
 
 
 ::: {.callout-tip}
