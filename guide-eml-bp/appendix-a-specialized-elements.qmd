@@ -1,6 +1,6 @@
 # Appendix A. Specialized elements {#sec-appendix-a .unnumbered}
 
-This appendix covers “specialized” EML elements that are not recommended for most EML applications. These elements are not deprecated or obsolete, but they do have limited use-cases and are fairly rarely used. Best practices for their use have not been determined. Much of the text and most examples come from earlier versions of the EML Best Practices document. 
+This appendix covers “specialized” EML elements that are not recommended for most EML applications. These elements are not deprecated or obsolete, but they do have limited use-cases and are rarely used. Best practices for their use have not been determined. Much of the text and most examples come from earlier versions of the EML Best Practices document. 
 
 
 ## Geographic Coverage
@@ -100,8 +100,8 @@ Example A.2:  Taxonomic system
     <references>pers-1</references>
   </identifierName>
   <taxonomicProcedures>
-    All individuals where identified and stored in alcohol, except 
-    for one voucher specimen for each species which was tagged and 
+    All individuals were identified and stored in alcohol, except 
+    for one voucher specimen for each species, which was tagged and 
     pinned.
   </taxonomicProcedures>
 </taxonomicSystem>
