@@ -6,16 +6,16 @@
 * The **additionalMetadata** element has no schema defined other than to contain well-formed XML, so EML creators have developed a range of applications for this element.
 :::
 
-The <**additionalMetadata**> element is a flexible field for including any other relevant metadata that pertains to the resource being described with EML. It may be used for extending EML to include metadata that is not already available in another part of the EML specification, or to include site- or system-specific extensions that are needed beyond the core metadata. There may be any number of <**additionalMetadata**> elements included as children of the root of an EML document (**/eml:eml/additionalMetadata**) and each must contain valid XML within two available child elements. The <**describes**> element is optional, and, if used, should contain a string identical to the \@**id** attribute of an EML element elsewhere in the document. The <**metadata**> child element is required and is a generic container for any valid (or “Well-formed”) XML metadata to be included in the document. When both of these child elements are present, the content of a <**metadata**> element therefore describes the EML element referenced in the <**describes**> element preceding it. If the <**describes**> element is omitted, it is assumed that the <**additionalMetadata**> content applies to the entire EML document.
+The \<**additionalMetadata**> element is a flexible field for including any other relevant metadata that pertains to the resource being described with EML. It may be used for extending EML to include metadata that is not already available in another part of the EML specification, or to include site- or system-specific extensions that are needed beyond the core metadata. There may be any number of \<**additionalMetadata**> elements included as children of the root of an EML document (**/eml:eml/additionalMetadata**) and each must contain valid XML within two available child elements. The \<**describes**> element is optional, and, if used, should contain a string identical to the \@**id** attribute of an EML element elsewhere in the document. The \<**metadata**> child element is required and is a generic container for any valid (or “Well-formed”) XML metadata to be included in the document. When both of these child elements are present, the content of a \<**metadata**> element therefore describes the EML element referenced in the \<**describes**> element preceding it. If the \<**describes**> element is omitted, it is assumed that the \<**additionalMetadata**> content applies to the entire EML document.
 
-Though there is significant flexibility in how to create and use <**additionalMetadata**> elements, there are also some common use cases that require particular child elements. These use cases, and other considerations for using the <**additionalMetadata**> element are below.
+Though there is significant flexibility in how to create and use \<**additionalMetadata**> elements, there are also some common use cases that require particular child elements. These use cases, and other considerations for using the \<**additionalMetadata**> element are below.
 
 
 ## Custom units
 
-Any numerical variables (aka attributes) in a data entity that have a custom unit of measurement defined (such as in **attribute/measurementScale/ratio/unit/customUnit**), as described in Chapter 11, must have their custom unit described in the <**additionalMetadata**> tree. These descriptions must be created using XML that follows the convention laid out in the STMML schema (defined in [this paper](https://doi.org/10.2481/dsj.1.128)). The schema requires that these EML custom units must appear in a list of <**stmml:unit**> elements nested within the <**stmml:unitList**> container element (**additionalMetadata/metadata/stmml:unitList/stmml:unit**). Each <**stmml:unit**> element in the list must have an \@**id** attribute that matches the unit name in the associated <**customUnit**> element. A range of other attributes can also be used in <**stmml:unit**> including \@**abbreviation**, \@**parentSI**, \@**multiplierToSI**, and \@**unitType**. Each <**stmml:unit**> element also requires a description element (<**stmml:description**>) containing a text description of the unit. While the EML schema explicitly states that the STMML schema should be imported into an `stmml` namespace, this is a lax requirement that is not checked during validation, and it is commonly left out of EML documents.
+Any numerical variables (aka attributes) in a data entity that have a custom unit of measurement defined (such as in **attribute/measurementScale/ratio/unit/customUnit**), as described in Chapter 11, must have their custom unit described in the \<**additionalMetadata**> tree. These descriptions must be created using XML that follows the convention laid out in the STMML schema (defined in [this paper](https://doi.org/10.2481/dsj.1.128)). The schema requires that these EML custom units must appear in a list of \<**stmml:unit**> elements nested within the \<**stmml:unitList**> container element (**additionalMetadata/metadata/stmml:unitList/stmml:unit**). Each \<**stmml:unit**> element in the list must have an \@**id** attribute that matches the unit name in the associated \<**customUnit**> element. A range of other attributes can also be used in \<**stmml:unit**> including \@**abbreviation**, \@**parentSI**, \@**multiplierToSI**, and \@**unitType**. Each \<**stmml:unit**> element also requires a description element (\<**stmml:description**>) containing a text description of the unit. While the EML schema explicitly states that the STMML schema should be imported into an `stmml` namespace, this is a lax requirement that is not checked during validation, and it is commonly left out of EML documents.
 
-Example 12.1: An <**additionalMetadata**> element containing an STMML <**unitList**> with one <**unit**>. This unit being described is the <**customUnit**> defined in Example 11.1 in Chapter 11.
+Example 12.1: An \<**additionalMetadata**> element containing an STMML \<**unitList**> with one \<**unit**>. This unit being described is the \<**customUnit**> defined in Example 11.1 in Chapter 11.
 
 
 ```xml
@@ -37,14 +37,14 @@ Example 12.1: An <**additionalMetadata**> element containing an STMML <**unitLis
 
 ## Annotations
 
-Annotation elements (<**annotation**>) may be included within <**additionalMetadata**> and some annotation use cases may require placement in this location to function. Often, annotations placed here will be used to describe elements elsewhere in the EML document using referenced \@**id** attributes in the <**describes**> child element. More on annotations, including placement in <**additionalMetadata**>, is covered in Chapter 7.
+Annotation elements (\<**annotation**>) may be included within \<**additionalMetadata**> and some annotation use cases may require placement in this location to function. Often, annotations placed here will be used to describe elements elsewhere in the EML document using referenced \@**id** attributes in the \<**describes**> child element. More on annotations, including placement in \<**additionalMetadata**>, is covered in Chapter 7.
 
 
 ## EML workflow indicators
 
 Some EML creation tools or workflows insert XML metadata into <additionalMetadata> to indicate the origin and build status of the EML document. For example, the ezEML metadata editor application inserts the application version and any EML templates used to create the EML document, as shown in Example 12.2.
 
-Example 12.2: <**additionalMetadata**> elements added to an EML document by the ezEML metadata editor.
+Example 12.2: \<**additionalMetadata**> elements added to an EML document by the ezEML metadata editor.
 
 
 ```xml
@@ -64,7 +64,7 @@ Example 12.2: <**additionalMetadata**> elements added to an EML document by the 
 
 ## Other use cases
 
-Because the <**additionalMetadata**> element has no schema defined other than to contain well-formed XML, EML creators (researchers, data managers, etc.) have developed a range of applications for this element. Some of these use cases expand on existing elements of the EML schema, such as adding structured project information not easily added to the <**project**> tree. Some are data management related, including workflow indicators or dataset categorizations. Below are a few of these use cases with links to published datasets that serve as examples.
+Because the \<**additionalMetadata**> element has no schema defined other than to contain well-formed XML, EML creators (researchers, data managers, etc.) have developed a range of applications for this element. Some of these use cases expand on existing elements of the EML schema, such as adding structured project information not easily added to the \<**project**> tree. Some are data management related, including workflow indicators or dataset categorizations. Below are a few of these use cases with links to published datasets that serve as examples.
 
 
 
