@@ -44,7 +44,7 @@ website:
       collapse-level: 1
       contents:
         - section: "EML Best Practices"
-          href: guide-eml-bp/book.qmd
+          href: guide-eml-bp/index.qmd
           contents:
             - href: guide-eml-bp/chapter-01-introduction-to-eml.qmd
               text: "1. Introduction to EML"
@@ -77,7 +77,7 @@ website:
             - href: guide-eml-bp/appendix-c-known-issues-and-gotchas.qmd
               text: "C. Known issues & gotchas"
         - section: "Dataset Design for Special Cases"
-          href: guide-special-cases/book.qmd
+          href: guide-special-cases/index.qmd
           contents: 
             - href: guide-special-cases/code.qmd
               text: "1. Code"
@@ -105,7 +105,7 @@ website:
       collapse-level: 2
       contents:
         - section: "EML Best Practices v3 (Archived)"
-          href: guide-eml-bp/archive/book.qmd
+          href: guide-eml-bp/archive/index.qmd
           contents:
             - href: guide-eml-bp/archive/preface.qmd
               text: "Preface"
