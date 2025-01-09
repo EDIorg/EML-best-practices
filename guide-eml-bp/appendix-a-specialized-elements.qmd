@@ -8,11 +8,11 @@ This appendix covers “specialized” EML elements that are not recommended for
 There are multiple EML elements that can be used to describe the geographic coverage of a dataset. The highest priority is to define the geographic coverage at the dataset level as described in Chapter 7. Less commonly used are geographic coverage elements within methods and more complex boundaries described by datasetGPolygon, both described below.
 
 
-### methods/spatialSamplingUnits/<geographicCoverage>
+### methods/spatialSamplingUnits/\<geographicCoverage>
 
 In the dataset/methods element, individual sampling sites may be entered under <**spatialSamplingUnits**>, each site in a separate coverage element (see below).
 
-Example A.1: geographicCoverage under spatialSamplingUnits
+Example A.1: <**geographicCoverage**> under <**spatialSamplingUnits**>
 
 
 ```xml
@@ -49,7 +49,7 @@ Example A.1: geographicCoverage under spatialSamplingUnits
 
 
 
-### <datasetGPolygon>
+### \<datasetGPolygon>
 
 The <**datasetGPolygon**> element may be included when the required bounding box does not adequately describe the study location, for example, if an irregular polygon is necessary to describe the study area, or there is an area within the bounding box that is excluded. This element is optional, and has two child elements.
 
@@ -66,7 +66,7 @@ It is somewhat rare for repository systems to display complex geographic coverag
 ## Taxonomic coverage
 
 
-### <taxonomicSystem> child elements
+### \<taxonomicSystem> child elements
 
 The optional **taxonomicCoverage/taxonomicSystem** trees may be used to detail the use of taxonomic identification resources and on the identification process. <**classificationSystem**> should be used to list authoritative taxonomic databases (such as ITIS, IPNI, NCBI, Index Fungorum, or USDA Plants) or classification systems used for taxonomic identification. Documentation and relevant literature regarding, used authoritative sources, including URL’s pointing to these sources, should be listed in <**classificationSystemCitation**>. Exceptions to, or deviation from, used authoritative sources should be explained in <**classificationSystemModification**>.
 
@@ -109,15 +109,15 @@ Example A.2:  Taxonomic system
 
 
 
-## Optional <methods> child elements
+## Optional \<methods> child elements
 
 
-## <sampling>
+## \<sampling>
 
 This optional tree can contain very specific information about the study site and associated sampling locations and frequencies. However, we recommend that descriptive geographic and temporal coverage elements should also be available at the dataset level to ensure dataset users have all information at their fingertips. The <**studyExtent**> child element provides specific information about the temporal and geographic extent of the study such as domains of interest in addition to geographic, temporal, and taxonomic coverage of the study site. This information can be provided as either simple text using <**description**> or by including detailed temporal or geographic <**coverage**> elements describing discrete time periods sampled or the sub-regions sampled within the overall geographic bounding box that was described at the <**dataset**> level. The <**samplingDescription**> element is an alternative TextType element available as a child to <**sampling**> that may be formatted similarly to the sampling methods section of a journal article.
 
 
-## <qualityControl>
+## \<qualityControl>
 
 The optional <**qualityControl**> element describes actions taken to either control or assess the quality of data resulting from the methods used to create the dataset. For a basic description under <**qualityControl**>, use the <**description**> element. The <**citation**> and <**protocol**> elements are also available to define detailed QA/QC protocols, but keep in mind that referencing external sources may fail in the future.
 
@@ -210,7 +210,7 @@ Example A.3: A methods element with some optional child elements <**sampling**> 
 ```
 
 
-Example A.4: methods, with dataSource
+Example A.4: <**methods**>, with <**dataSource**>
 
 
 ```xml
@@ -485,7 +485,7 @@ Table A.2. Elements specific to each of the six entity types.
 | <**spatialRaster**> | Gridded data, raster cell data, remote sensing data | **EntityGroup** (<**entityName**> required, others recommended or optional)<br><**attributeList**> (required)<br><**constraint**><br><**spatialReference**> (required)<br><**georeferenceInfo**><br><**horizontalAccuracy**> (required)<br><**verticalAccuracy**> (required)<br><**cellSizeYDirection**> (required)<br><**numberOfBands**> (required)<br><**rasterOrigin**> (required)<br><**rows**> (required)<br><**columns**> (required)<br><**verticals**> (required)<br><**cellGeometry**> (required)<br><**toneGradation**><br><**scaleFactor**><br><**offset**><br><**imageDescription**> |
 | <**spatialVector**> | Lines, points polygons, KML (if converted), ESRI shape files | **EntityGroup** (<**entityName**> required, others recommended or optional)<br><**attributeList**> (required)<br><**constraint**><br><**geometry**> (required)<br><**geometricObjectCount**><br><**topologyLevel**><br><**spatialReference**><br><**horizontalAccuracy**><br><**verticalAccuracy**> |
 
-## <constraint>
+## \<constraint>
 
 This element tree is found at (XPath):
 
@@ -537,4 +537,3 @@ Example A.7: constraint
   </foreignKey>
 </constraint>
 ```
-

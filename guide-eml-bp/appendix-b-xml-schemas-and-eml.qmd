@@ -69,7 +69,7 @@ Namespace attributes have a two-part key that starts with **xmlns** (for XML nam
 
 ### Escaping special characters
 
-As a structured text markup language, XML must treat certain characters as special. Most importantly, the less-than sign (<) is special because it begins an XML tag and the ampersand (&) is special because it begins something called an entity reference (see [here](https://www.w3.org/TR/xml/#sec-references)). When these special characters appear as content in XML (i.e., as text between start and end tags, or in an attribute value), most XML parsers will interpret them as part of the XML structure. For example, the less-than sign in the text expression “one < two” would be interpreted as the start of an XML tag when parsed. The quotation, apostrophe, and greater-than signs (“, ‘, and >) are also special characters, but they are misinterpreted much less often. To avoid errors, special characters can be “escaped” in one of two ways. 
+As a structured text markup language, XML must treat certain characters as special. Most importantly, the less-than sign (\<) is special because it begins an XML tag and the ampersand (\&) is special because it begins something called an entity reference (see [here](https://www.w3.org/TR/xml/#sec-references)). When these special characters appear as content in XML (i.e., as text between start and end tags, or in an attribute value), most XML parsers will interpret them as part of the XML structure. For example, the less-than sign in the text expression “one < two” would be interpreted as the start of an XML tag when parsed. The quotation, apostrophe, and greater-than signs (“, ‘, and >) are also special characters, but they are misinterpreted much less often. To avoid errors, special characters can be “escaped” in one of two ways. 
 
 First, special characters can be encoded with distinct character sequences that XML parsers can understand without ambiguity. Notice that these escape sequences begin with the special ampersand. Escape encodings for the five special characters are:
 
@@ -81,7 +81,7 @@ First, special characters can be encoded with distinct character sequences that 
 * `"` encoded as `&quot;`
 * `>` encoded as `&gt;`
 
-Second, blocks of text containing special characters can be enclosed in a CDATA section, which begins with the `<![CDATA[` sequence and closes with `]]>`, such as in example B.4. This is a handy way to escape text that contains many special characters at once. Escaping special characters is not needed in every case, but it is well-worth remembering to escape < and & most of the time (see this SE answer for a concise summary: [https://stackoverflow.com/a/46637835/290085](https://stackoverflow.com/a/46637835/290085)). 
+Second, blocks of text containing special characters can be enclosed in a CDATA section, which begins with the `<![CDATA[` sequence and closes with `]]>`, such as in example B.4. This is a handy way to escape text that contains many special characters at once. Escaping special characters is not needed in every case, but it is well-worth remembering to escape \< and \& most of the time (see this SE answer for a concise summary: [https://stackoverflow.com/a/46637835/290085](https://stackoverflow.com/a/46637835/290085)). 
 
 Example 2.4: A CDATA section in which all text content between the opening and closing CDATA sequences (`<![CDATA[` and `]]>`), including the <**greeting**> tags, will be interpreted as character data instead of XML markup. Example taken from W3.org documentation ([link](https://www.w3.org/TR/REC-xml/#sec-cdata-sect)).
 
@@ -177,7 +177,7 @@ Tools for validating XML against any schema
 Like all XML documents, EML has a hierarchical structure. Because the EML standard is ultimately defined by an XML schema (or XSD), there are rules about what elements must be included, in which locations in the hierarchy, and what content they may and may not hold. A valid EML document must follow these rules. In this section we define the XML elements that are placed at the highest level of an EML document, and how they should be structured. We start with the “root” element, which encloses all others, and then define several top-level elements that may be placed directly inside the root. Some of the top-level elements are required and some are optional, and many have required or recommended attributes to consider.
 
 
-### The root element (<**eml:eml**>)
+### The root element (\<eml:eml>)
 
 This <**eml:eml**> element is the root element in all EML documents, meaning that it is required and encloses all other elements. Other than any declarations present, the opening tag of this root element (<**eml:eml**>) should always come first in an EML document. Notice that the EML namespace is often immediately defined using the first attribute in this element (**xmlns:eml="[https://eml.ecoinformatics.org/eml-2.2.0](https://eml.ecoinformatics.org/eml-2.2.0)"**) though this may not be required by all applications using EML documents. The EML root element has three other important and required attributes that are described below. An example EML root starting tag, with all these elements, is shown in Example B.5.
 
@@ -203,7 +203,7 @@ The \@**system** attribute is required to identify the data management or reposi
 
 ::: {.callout-tip}
 ## EDI context note
-When publishing to the EDI repository, the \@**system** attribute will be replaced with "https://pasta.edirepository.org"
+When publishing to the EDI repository, the \@**system** attribute will be replaced with "https://pasta.edirepository.org."
 :::
 
 Example B.5: A root EML element’s starting tag, including required attributes \@**schemaLocation**, \@**packageId**, and \@**system**. The \@**system** attribute is set to “https://pasta.edirepository.org”, indicating that this dataset is, or will be, published in the EDI repository and the \@**packageId** attribute uses the EDI identifier format. Note that the three other namespace attributes (`xmlns:eml`, `xmlns:xsi`, `xmlns:stmml`) are not strictly required.
@@ -227,7 +227,7 @@ Example B.5: A root EML element’s starting tag, including required attributes 
 There are a number of potential top-level elements that can be nested directly below the EML root (<**eml:eml**>). Only one, a <**dataset**> element, is required for data packages, but several others are commonly used. We briefly describe the most common and useful top-level elements below, and then mention others that are more suitable for use within <**dataset**>. Many of these elements receive greater attention in later chapters.
 
 
-#### The dataset element (<**dataset**>)
+#### The dataset element (\<dataset>)
 
 The <**dataset**> element is an EML document’s flexible container for the vast majority of metadata describing the data file(s) being shared or published. Under <**dataset**>, many EML elements are available to describe the dataset. Some of these elements are required and some are optional, and some (such as people and organizations) are “repeatable” elements that may be nested at multiple levels and locations within a <**dataset**>. All must follow the order enforced by the EML schema. Refer to Chapter 2 for a list of the highest-priority metadata elements needed to meet FAIR data principles, in the order they should be included as child elements of <**dataset**>. Chapters 3-12 of this document are devoted to recommended placement, formatting and content of these sub-elements of <**dataset**>. Though not all are required, we highly recommend including them to facilitate re-use of the data resource when it is shared or published.
 
@@ -248,12 +248,12 @@ The descriptive metadata elements within <**dataset**> should be followed by one
 Both of the spatial data entity types are infrequently used and are primarily described in the “Data Package Design for Special Cases” companion to this document. The most infrequently used elements include <**storedProcedure**>, which describes a measurement or observation protocol, and <**view>,** which describes a query of a relational database or other structured data resource. We include no best-practices for these data entity types in this document.
 
 
-#### Additional metadata (<**additionalMetadata**>)
+#### Additional metadata (\<additionalMetadata>)
 
 The <**additionalMetadata**> element is a flexible field for including any other relevant metadata that pertains to the resource being described by EML. Its content must be valid XML. Though there is significant flexibility in how to create and use <**additionalMetadata**> elements, there are also some common use cases that require particular child elements. Several use cases and other considerations for using this element are described in Chapter 12.
 
 
-#### Access elements (<**access**>)
+#### Access elements (\<access>)
 
 Note that this element is deprecated in EML 2.2 ([link](https://eml.ecoinformatics.org/whats-new-in-eml-2-2-0.html#access-elements-deprecated))
 
@@ -262,7 +262,7 @@ An <**access**> element contains a list of rules defining access permissions for
 This element is now deprecated, but is still in use by data repositories (including EDI) that are backward compatible with EML 2.1.0. Note that if <**access**> is omitted, the repository may presume that only the dataset submitter will be allowed access. The <**access**> element is described more fully in Chapter 6.
 
 
-#### Dataset annotations (<annotations>)
+#### Dataset annotations (\<annotations>)
 
 Annotations are a more recent addition to the EML schema and are used to describe the purpose and content of a dataset using precise semantics. An <**annotations**> element contains a list of child <**annotation**> elements, and can be included within many EML elements, at multiple levels within an EML document (including the root). Annotations are described in detail in Chapter 7.
 

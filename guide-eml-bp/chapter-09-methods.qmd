@@ -13,12 +13,12 @@ The methods and procedures used to generate data objects should be described in 
 A <**methods**> tree must contain at least one <**methodStep**> element, and may optionally have a <**sampling**> element and any number of <**qualityControl**> elements. The <**methodStep**> element may have the optional child elements <**dataSource**>, <**instrumentation**>, and <**software**>. Figure 9.1 outlines the likely decision points needed to choose what child elements to include in <**methods**>.
 
 
-## Methods steps (<methodStep>)
+## Methods steps (\<methodStep>)
 
 At least one <**methodStep**> element is required under <**methods**>, and each step should contain a logical portion of the methods used to create the published data; for example, sampling design, field data collection, laboratory procedures, quality control/assurance, and statistical analysis. A dataset <**methods**> element may contain as many <**methodStep**> elements as are necessary. All text describing each step must be placed within a <**description**> element, which is a **TextType** (see [Appendix B](appendix-b-xml-schemas-and-eml.qmd)). For <**description**> elements that require complex formatting or layouts, the standard **TextType** elements (<**section**>, <**para**>, etc.), Markdown formatting (<**markdown**>), and LaTex typesetting may be used. Below are additional, optional child elements to <**methodStep**>.
 
 
-### Data provenance (<dataSource>)
+### Data provenance (\<dataSource>)
 
 The optional <**dataSource**> element is for creating references to published data that was used as source data for the dataset being described (i.e. a dataset’s provenance). For instance, if the data being described by EML is mean annual temperature values calculated from hourly temperature measurements published in a separate dataset, the <**dataSource**> element could be used to identify and provide a reference to these source data. This element may contain a fairly complete set of child elements describing the source data, including a <**title**>, <**creator**>, and <**contact**>, but the most important child element is a <**distribution**> element containing the source dataset’s DOI or other URL (**distribution/online/url**). It is strongly recommended to include <**dataSource**> elements when publishing any dataset derived from other sources.
 

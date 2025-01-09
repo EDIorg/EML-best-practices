@@ -27,7 +27,7 @@ Like many other EML elements, each of the entity elements has three attributes, 
 :::
 
 
-## Recommendations for dataTable
+## Recommendations for \<dataTable>
 
 Carefully consider what files or data objects should be described with a <**dataTable**> element. If at all possible, do not publish tabular data in dated, proprietary, or binary file formats such as Microsoft Excel files. When handling tabular data in such formats it is preferable to export to accessible, open data formats, such as plain delimited text files (such as CSV) for publication. The <**attributeList**> tree is required in <**dataTable**> entities to describe all attributes, or column variables, in the table. Best practices for <**attributeList**> are in Chapter 11.
 
@@ -72,7 +72,7 @@ Example 10.1: An example of a <**dataTable**> entity. The elements in the Entity
 
 
 
-## Recommendations for otherEntity
+## Recommendations for \<otherEntity>
 
 When publishing an <**otherEntity**>, we recommend using open, non-proprietary file formats to the extent possible, so that the published data objects can be used without restriction (such as requiring an expensive software license). Though <**otherEntity**> is something of a catch-all data entity type, it requires a free text <**entityType**> child element to describe whatever data object is being published. It is strongly recommended to place standardized descriptive text here that complements the standardized file format information included in **physical/dataFormat/externallyDefinedFormat/formatName**. This is demonstrated in Example 10.2, and Table 10.2 provides suggested <**entityType**> values for a variety of file formats. Further guidance on this, including sources for standard terms, is given below in the “Physical tree” section. Additional information needed to fully describe the file format, data structure, use, or other aspects of the data object can also be provided in the element’s <**entityDescription**> as needed.
 
@@ -137,17 +137,17 @@ The <**entityDescription**> element should contain a longer, more descriptive ex
 The <**physical**> tree (**/eml:eml/dataset/[entity]/physical**) describes the physical format and location of the data object. It should contain sufficient detail to allow a data user to obtain and access the object with the correct software tools. There are a number of child elements in the <**physical**> tree that we recommend populating.
 
 
-#### <characterEncoding>
+#### \<characterEncoding>
 
 The <**characterEncoding**> element defines the encoding of any text file data objects. For most English language based data, an encoding of UTF-8 is typically correct, with ASCII being another typical encoding. Whatever you choose, if you do provide an encoding, please be sure it is not an incorrect one, e.g., do not choose ASCII if your data include extended Latin characters.
 
 
-#### <objectName>
+#### \<objectName>
 
 The <**objectName**> is the filename of the object in a file system or wherever it is accessible via the internet. For example, “NPPdata_FRS_2006-2020.csv”.
 
 
-#### <dataFormat>
+#### \<dataFormat>
 
 The <**dataFormat**> element defines the internal physical format of the data object. The three possible child elements to choose choose within this element are
 
@@ -179,7 +179,7 @@ If archiving HTML files at EDI, you must use a <**formatName**> with the value "
 :::
 
 
-#### <distribution>
+#### \<distribution>
 
 The <**distribution**> tree provides information on how the resource is distributed, and the contents of this tree is generally covered at the <**dataset**> level (refer to Chapter 6). However, there are a few points which will be reiterated. For submission of the dataset to a repository, the content of a <**url**> element at the entity level should deliver data, and not point to another application or use page. The <**url**>’s \@**function** attribute should have the value “download” (i.e. <**url function=”download”**>). This is implied if the \@**function** attribute is omitted.
 

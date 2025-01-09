@@ -11,7 +11,7 @@
 * Annotations can provide a valuable supplement to standard EML elements, but look for advice and feedback on using semantic annotation in your research and data management communities before implementing them in EML.
 :::
 
-## Keywords (<keywordSet>, <keyword>)
+## Keywords (\<keywordSet>, \<keyword>)
 
 Meaningful keywords are essential metadata for describing published datasets and enhancing their discoverability. In EML documents, include keywords as <**keyword**> elements nested within one or more parent <**keywordSet**> elements and it is recommended to place <**keywordSet**> elements as children of <**dataset**> (/**eml:eml/dataset/keywordSet**). Whenever possible, it is recommended to populate a <**keywordSet**> keyword terms selected from established, community-accepted controlled vocabularies (CV) or keyword lists, and then include the name or identifier of the CV or list within a <**keywordThesaurus**> child element in the same <**keywordSet**>. Using this same approach, research groups, institutions, or individual data managers may create and reference keyword thesauri specific to the subject matter of the data and their data management needs. Because <**keyword**> elements, along with <**title**> and <**abstract**> elements, are frequently accessed by full-text search tools, following thoughtful, consistent keywording practices will help optimize the searchability of datasets.
 
@@ -58,12 +58,12 @@ Example 7.1: Several <**keywordSet**> elements containing keywords derived from 
 
 
 
-## Coverage elements (<coverage>)
+## Coverage elements (\<coverage>)
 
 The <**coverage**> element is intended to describe a dataset’s coverage in terms of space, time, and taxonomy, and may therefore contain three types of child element: <**geographicCoverage**>, <**temporalCoverage**>, and <**taxonomicCoverage**>. Populating these elements as recommended enables discovery by advanced search tools, and facilitates successful interpretation and reuse of the data. This best practice recommends using <**coverage**> elements at the dataset level (**eml:eml/dataset/coverage**), but they may also be placed at methods, entity and attribute levels for some use cases.
 
 
-### Geographic Coverage (<geographicCoverage>)
+### Geographic Coverage (\<geographicCoverage>)
 
 The <**geographicCoverage**> element describes geographic features related to the data, such as research sites or sample locations. A <**coverage**> element can contain multiple <**geographicCoverage**> elements, each describing a geographic feature such as a point or bounding box. Include at least one <**geographicCoverage**> element per dataset, and as many as necessary to facilitate dataset discovery and evaluate fitness for use. Note, however, that this element is not designed to exhaustively describe a dataset’s spatial entities. The most common features described in <**geographicCoverage**> are points and bounding boxes, but more complex spatial entities can also be defined in EML (see [Appendix A](appendix-a-specialized-elements.qmd)). 
 
@@ -128,7 +128,7 @@ Point and bounding box elements may be used together, and the content and number
 Providing appropriate geographic detail is recommended, but keep in mind that the <**geographicCoverage**> element is not intended to fully describe spatial datasets. Including large numbers of <**geographicCoverage**> elements in a dataset (more than 10, say) may be impractical for data managers, and extracting useful spatial data from those elements can be onerous for users. For example, when a dataset needs to describe numerous geographic features, such as data from a regular sample grid or spatially dense sampling area, it is appropriate to describe the grid or area with a bounding box rather than a long list of points in individual <**geographicCoverage**> elements. More advanced spatial entities can also be added to a <**geographicCoverage**> using the <**datasetGPoly**> child element. This element is not used frequently but can be useful and is described in [Appendix A](appendix-a-specialized-elements.qmd). If spatial location is important to use or interpret the data, the best practice is to include geographic features as a separate data entity with the dataset. When the dataset’s geographic coverage is lengthy, complex and/or intended for use in GIS software, consider including the locations as tabular data (a CSV file), or in geospatial files, like a GeoPackage or KMZ file, attached as an <**otherEntity**> (see Chapter 10).
 
 
-### Temporal Coverage (<temporalCoverage>)
+### Temporal Coverage (\<temporalCoverage>)
 
 The <**temporalCoverage**> element represents the period(s) of time covered in the dataset. Most often this means the dates that included data were collected. If the dataset is for a study using retrospective or historical data, this element should not refer to the dates the study was conducted, but the dates represented in the data.
 
@@ -154,7 +154,7 @@ Example 7.4: A simple <**temporalCoverage**> element describing a range of dates
 
 
 
-### Taxonomic Coverage (<taxonomicCoverage>)
+### Taxonomic Coverage (\<taxonomicCoverage>)
 
 The <**taxonomicCoverage**> element documents taxonomic information for all organisms relevant to the study. The lowest available level, preferably the species binomial, and common name should always be included, but higher-level taxa can also be included to support broader taxonomic searches. Blocks of <**taxonomicClassification**> elements should be hierarchically nested within a single <**taxonomicCoverage**> element rather than repeated at the same level. The optional <**generalTaxonomicCoverage**> element can include general descriptions of a) the procedure for how taxonomy was determined (keys used, etc.), b) the flora/fauna included in the study (scope), and c) granularity of the taxonomy - for example, identification to family, genus, or species.
 
@@ -279,7 +279,7 @@ Example 7.6: A <**taxonomicCoverage**> element describing two species, omitting 
 
 
 
-## Annotations (<annotation>, <annotations>)
+## Annotations (\<annotation>, \<annotations>)
 
 Semantic annotation is the practice of enhancing the context, utility, and meaning of a dataset by establishing relationships between its metadata and external resources like community ontologies or controlled vocabularies. Elements for semantic annotations are relatively new to EML and applications are still in development. See the annotation primer by the EML developers for a thorough overview ([7 Semantic Annotation Primer](https://eml.ecoinformatics.org/semantic-annotation-primer.html)), and it is strongly recommended to look for advice and feedback on using semantic annotation in your research and data management communities before implementing them in EML. In brief, EML 2.2.0 supports entering terms from web-accessible ontologies and vocabularies via <**annotation**> elements.
 

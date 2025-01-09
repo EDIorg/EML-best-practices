@@ -18,7 +18,7 @@ The primary purpose of using EML to describe a dataset is to make the data reusa
 These sections of EML are described in order below.
 
 
-## Permission to access the dataset (<access>)
+## Permission to access the dataset (\<access>)
 
 An <**access**> element contains a list of rules defining access permissions for an EML document’s metadata and any data files (or entities) that the metadata describes. Any access rules defined must be applicable to the system where the dataset is stored. Usually, that system is a research data repository. See Example 6.1 below if you plan to construct your own access element. With the exception of certain sensitive information, metadata should be publicly accessible.
 
@@ -47,7 +47,7 @@ Example 6.1: An <**access**> element for the EDI repository allowing full permis
 
 
 
-## Distribution of data entities (<distribution>)
+## Distribution of data entities (\<distribution>)
 
 The <**distribution**> element provides methods to obtain either the data entities themselves, metadata records, or further resources related to the dataset. This element can appear in many places in an EML document. At the dataset level (direct child of <**dataset**>) it would provide a method to obtain the dataset itself. At the entity level (e.g. within a <**dataTable**> element) the element provides a method to obtain the data entity files. The <**distribution**> element has one of three children for describing the location of the resource: <**online**>, <**offline**>, and <**inline**>.
 
@@ -116,7 +116,7 @@ Example 6.3: A <**distribution**> element at the data entity level. This is an e
 
 
 
-## Licensing and intellectual rights (<licensed>, <intellectualRights>)
+## Licensing and intellectual rights (\<licensed>, \<intellectualRights>)
 
 Two elements are available to govern licensing and data usage rights: <**licensed**> and <**intellectualRights**>. It is recommended that licensing, policies, and expectations for use of published datasets be clearly articulated in these elements. In general, research datasets should be released with the fewest restrictions on use possible. Information in these elements may be scrutinized by journal reviewers and funding agencies when datasets are cited in papers or proposals.
 

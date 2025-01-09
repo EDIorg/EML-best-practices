@@ -44,12 +44,12 @@ The <**measurementScale**> element describes the *scale* from which values of th
 Each of the five <**measurementScale**> child elements described above requires its own child elements to fully describe the measurement scale.
 
 
-#### Describing non-numeric scales (<nominal> and <ordinal>)
+#### Describing non-numeric scales (\<nominal> and \<ordinal>)
 
 Both the <**nominal**> and <**ordinal**> measurement scale elements require a <**nonNumericDomain**> element with either a text domain element (<**textDomain**>) indicating plain text values, or an enumerated list of codes (<**enumeratedDomain**). The <**enumeratedDomain**> describes categorical data and requires one or more <**codeDefinition**> elements to describe each category or coded value present in the attribute using the <**code**> and <**definition**> child elements. Note that codes and their explanations can also be provided in a referenced data entity (<**entityCodeList**>) or an external source (<**externalCodeSet**>), but these are rarely used and not generally recommended. For <**textDomain**> an optional pattern provided in <**definition**> may describe the text, e.g., a US telephone number can be described by the format “\d\d\d-\d\d\d-\d\d\d\d.”
 
 
-#### Describing numeric scales (<interval> and <ratio>)
+#### Describing numeric scales (\<interval> and \<ratio>)
 
 The numeric <**interval**> and <**ratio**> measurement scales require child elements to describe measurement units (<**unit>**) and number type (<**numericDomain>**), and can optionally describe the floating point precision of attribute values (<**precision**>). Any measurement units included in <**unit**> must be described in correct physical units that are clearly defined and linked to the International System of Units (SI). Terms which describe data but are not units, such as the substance or substrate being measured, should be placed in <**attributeDefinition**>. For example, for data describing “milligrams of carbon per square meter,” “carbon” belongs in the <**attributeDefinition**>, while the <**unit**> is “milligramPerMeterSquared.” A wide selection of units are already included in the EML schema’s standard units dictionary (see the [EML schema docs](https://eml.ecoinformatics.org/schema/eml-unitTypeDefinitions_xsd.html#StandardUnitDictionary)). To assign one of these to an attribute, include it by name in a <**standardUnit**> child element (**unit/standardUnit**). 
 
@@ -65,7 +65,7 @@ The <**numericDomain**> element describes the numeric values of an attribute usi
 The optional <**precision**> element describes the number of decimal places for the attribute, which is useful to determine rounding criteria, estimate storage size, and choose system-specific data types (e.g. “float” vs “long” in C) for an attribute. Currently, EML does not allow more than one precision value for a column, so variable attribute precision information should be described in a <**methodStep**> element.
 
 
-#### Describing <dateTime> scales
+#### Describing \<dateTime> scales
 
 Date and time variables can be expressed in many different formats, some of which are ambiguous. The <**formatString**> child element (**dateTime/formatString**) is required to to describe the format of any dateTime attributes in a data entity, and it is strongly recommended to use the ISO 8601 standard in data entities described with EML. An example of an allowable ISO date-time format is “YYYY-MM-DD,” as in 2004-06-25, or, more fully, as “YYYY-MM-DDThh:mm:ssTZD” (eg 1997-07-16T19:20:30.45Z). Place whatever string is appropriate to describe the data directly into a <**formatString**> element. The ISO standard is quite strict, and legacy datasets or equipment outputs (e.g. from sensors) often contain non-ISO standard dates. The EML schema therefore provides additional allowable formats (see the [EML documentation for a complete list](https://eml.ecoinformatics.org/schema/eml-attribute_xsd#AttributeType_AttributeType_measurementScale_dateTime)). Note that a <**dateTime**> measurement scale cannot be used to describe time durations. In that case, use a ratio measurement scale with a unit such as seconds, nominalMinute or nominalDay (all from the EML standard units library) which are defined in relation to SI second. To describe the measurement precision of dates or times in a <**dateTime**> scales, using the <**dateTimePrecision**> element is recommended.
 
