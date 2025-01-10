@@ -17,7 +17,7 @@ There is no perfect dataset. When designing a dataset, it is important to consid
 
 
 * [General considerations](https://edirepository.org/resources/designing-a-data-package)
-* [Special cases (e.g., spatial data, model outputs, images, etc.)](../guide-special-cases/book.qmd)
+* [Special cases (e.g., spatial data, model outputs, images, etc.)](../guide-special-cases/index.qmd)
 
 
 ## High-priority Metadata

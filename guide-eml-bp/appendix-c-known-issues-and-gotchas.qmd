@@ -3,7 +3,6 @@
 Just bullet points for now
 
 
-
 * Custom units & varying capitalization of an attribute
 * Validator problems
 * Id and references - RP id cannot be re-used. 

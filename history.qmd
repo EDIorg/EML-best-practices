@@ -5,10 +5,10 @@
 **EML Best Practices**
 
 * The first "BPs" (and the origins of this collection) were focused on the use of the EML metadata schema, and created by the LTER data managers.
-  - *EML Best Practices, Version 1*, 2005: current whereabouts unknown 
+  - *EML Best Practices, Version 1*, 2004: [PDF version](archive/emlbestpractices_oct2004_final.pdf), [U.S. LTER doc archive](https://lternet.edu/documents/eml-best-practices-2004/) 
 * Over time, that document was expanded to include specifics about data types and practices of the LTER related to the then-nascent PASTA system.
-  - *EML Best Practices, Version 2*, 2012?: current whereabouts unknown  
-* In 2017, the newly established [EDI](https://edirepository.org) repository (established in 2016) revised the EML BP to general material about use of the EML spec.
-  - *EML Best Practices, Version 3*, 2017: [HTML pages](./guide-eml-bp/archive/book.qmd), [PDF version](https://drive.google.com/file/d/1HaoRXPjCtDueIJ-IzflktglYJzIIUkxH/view?usp=sharing)
-- This repository was created in 2019 to house that and other data package recommendations as gh-pages. Some minor modifications were made to the *EML Best Practices, Version 3*, document after this was initiated. See the repository history for details.
-- In 2023 and 2024, the EML Best Practices working group re-convened to produce *EML Best Practices, Version 4*, which will be published soon.
+  - *EML Best Practices, Version 2*, 2011: [PDF version](archive/emlbestpractices-2.0-FINAL-20110802.pdf), [U.S. LTER doc archive](https://lternet.edu/documents/eml-best-practices-2011/) 
+* In 2017, the newly established [EDI](https://edirepository.org) repository (established in 2016) revised the EML BP to include general material about use of the EML specification.
+  - *EML Best Practices, Version 3*, 2017: [HTML pages](./guide-eml-bp/archive/index.qmd), [PDF version](archive/emlbestpractices-v3.pdf)
+- This repository was created in 2019 to house *EML Best Practices, Version 3*, and other data package recommendations as markdown files accessible on the web. Some minor modifications were made to the *Version 3*, document after this was initiated. See the repository history for details.
+- In 2023 and 2024, the EML Best Practices working group re-convened to produce *EML Best Practices, Version 4*, which will be published soon. Older versions will also receive DOIs.
