@@ -291,9 +291,9 @@ Example 7.7: An \<**annotation**> element for describing a measurement unit by d
 ```xml
 <annotation>
   <propertyURI label="has unit">
-    http://qudt.org/schema/qudt/Unit
+    http://qudt.org/schema/qudt/hasUnit
   </propertyURI>
-  <valueURI label=" GM-PER-M2">
+  <valueURI label="GM-PER-M2">
     http://qudt.org/vocab/unit/GM-PER-M2
   </valueURI>
 </annotation>
